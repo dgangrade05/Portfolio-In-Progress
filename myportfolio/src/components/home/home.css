@@ -1,0 +1,25 @@
+header {
+  height: 100vh;
+  padding-top: 17rem;
+  overflow: hidden;
+}
+
+.home-container {
+  height: 100%;
+  text-align: center;
+  position: relative;
+}
+
+/* MEDIA QUERIES - for meduim devices */
+
+@media screen and (max-width: 1024px) {
+    .header {
+        height: 88vh;
+      }
+  }
+  
+  /* MEDIA QUERIES - for small devices */
+  
+  @media screen and (max-width: 600px) {
+ 
+  }

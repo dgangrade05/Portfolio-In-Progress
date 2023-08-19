@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DG</title>
+    <style>
+      .note {
+        width: 130px;
+        height: 130px;
+        border: 0px solid #000000;
+        position: absolute;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        opacity: 0;
+        transform: translateX(0);
+        transition: opacity 1, transform 0.5s;
+        box-shadow: 0px 20px 10px -10px rgba(0, 0, 0, 0.28);
+      }
+
+      .note.slide-in {
+        opacity: 1;
+        transform: translateX(0);
+      }
+
+      .note.rotate {
+        transform: rotate(356deg);
+      }
+
+      #note1 {
+        rotate: 17deg;
+        cursor: move;
+      }
+
+      #note2 {
+        rotate: -17deg;
+        cursor: move;
+      }
+
+      .hello-icon {
+        font-size: 3.6rem;
+        pointer-events: none;
+        cursor: move;
+      }
+
+      .notes-p {
+        pointer-events: none;
+        cursor: move;
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.3rem;
+        line-height: 1rem;
+      }
+
+      /* media queries */
+      @media screen and (max-width:1024px) {
+         .notes{
+            height: 95px;
+            width: 95px;
+         }
+
+         #note1{
+            top: 200;
+            left: 50;
+         }
+      }
+      
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div class="note" id="note1">
+      <p class="notes-p">Open for<br />Intern roles.</p>
+    </div>
+    <div class="note" id="note2"><p class="hello-icon">👋</p></div>
+
+    <script>
+      const noteColors = [
+        "#b8ffc6",
+        "#faefcc",
+        // Add more colors as needed
+      ];
+
+      const notes = document.querySelectorAll(".note");
+      notes.forEach((note, index) => {
+        const color = noteColors[index];
+        note.style.backgroundColor = color; // Set the background color
+        note.classList.add("slide-in");
+
+        let activeNote = null;
+        let offsetX, offsetY;
+
+        function startDrag(e) {
+          activeNote = e.target;
+          offsetX = e.clientX - activeNote.getBoundingClientRect().left;
+          offsetY = e.clientY - activeNote.getBoundingClientRect().top;
+          window.addEventListener("mousemove", drag);
+          window.addEventListener("mouseup", stopDrag);
+        }
+
+        function drag(e) {
+          if (!activeNote) return;
+
+          activeNote.style.left = e.clientX - offsetX + "px";
+          activeNote.style.top = e.clientY - offsetY + "px";
+        }
+
+        function stopDrag() {
+          activeNote = null;
+          window.removeEventListener("mousemove", drag);
+          window.removeEventListener("mouseup", stopDrag);
+        }
+
+        note.addEventListener("mousedown", startDrag);
+
+        note.addEventListener("click", () => {
+          note.classList.add("rotate");
+          setTimeout(() => {
+            note.classList.remove("rotate");
+          }, 1000);
+        });
+      });
+
+      // Add function to update note positions based on screen size
+      function updateNotePositions() {
+        const screenWidth = window.innerWidth;
+
+        if (screenWidth <= 1024) {
+          notes[0].style.top = "420px";
+          notes[0].style.left = "550px";
+          notes[1].style.top = "340px";
+          notes[1].style.left = "670px";
+        } else {
+          notes[0].style.top = "420px";
+          notes[0].style.left = "800px";
+          notes[1].style.top = "320px";
+          notes[1].style.left = "880px";
+        }
+      }
+
+      // Call the function initially and on window resize
+      updateNotePositions();
+      window.addEventListener("resize", updateNotePositions);
+    </script>
+  </body>
+</html>
