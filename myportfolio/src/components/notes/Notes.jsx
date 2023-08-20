@@ -14,11 +14,13 @@ const Notes = () => {
   const [offsetY, setOffsetY] = useState(0);
 
   const startDrag = (e) => {
-    setActiveNote(e.target);
+    // setActiveNote(e.target);
+    console.log(e)
+
     setOffsetX(e.clientX - e.target.getBoundingClientRect().left);
     setOffsetY(e.clientY - e.target.getBoundingClientRect().top);
-    window.addEventListener("mousemove", drag);
-    window.addEventListener("mouseup", stopDrag);
+    // window.addEventListener("mousemove", drag);
+    // window.addEventListener("mouseup", stopDrag);
   };
 
   const drag = (e) => {
@@ -29,8 +31,8 @@ const Notes = () => {
 
   const stopDrag = () => {
     setActiveNote(null);
-    window.removeEventListener("mousemove", drag);
-    window.removeEventListener("mouseup", stopDrag);
+    // window.removeEventListener("mousemove", drag);
+    // window.removeEventListener("mouseup", stopDrag);
   };
 
   useEffect(() => {
@@ -46,12 +48,13 @@ const Notes = () => {
     }
 
     setNotes(updatedNotes);
-  }, [notes]);
+  }, []);
 
   return (
     <div>
       <div
         className="note"
+        onDragStart={(e)=>startDrag(e)}
         style={{
           backgroundColor: noteColors[0],
           top: notes[0]?.top,

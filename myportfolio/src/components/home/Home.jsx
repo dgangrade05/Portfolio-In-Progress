@@ -18,8 +18,8 @@ const Home = () => {
         </h3>
 
         {/* CARDS  */}
-        <Notes />
       </div>
+        <Notes />
     </header>
   )
 }
