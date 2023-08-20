@@ -1,5 +1,7 @@
 import React from 'react'
 import './home.css'
+import Notes from '../notes/Notes'
+import '../notes/notes.css'
 
 const Home = () => {
   return (
@@ -16,6 +18,7 @@ const Home = () => {
         </h3>
 
         {/* CARDS  */}
+        <Notes />
       </div>
     </header>
   )

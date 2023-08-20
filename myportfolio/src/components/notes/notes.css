@@ -1,0 +1,44 @@
+/* YourComponent.css */
+
+.note {
+    width: 130px;
+    height: 130px;
+    border: 0px solid #000000;
+    position: absolute;
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    opacity: 0;
+    transform: translateX(0);
+    transition: opacity 1s, transform 0.5s;
+    box-shadow: 0px 20px 10px -10px rgba(0, 0, 0, 0.28);
+  }
+  
+  .note.slide-in {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .note.rotate {
+    transform: rotate(356deg);
+  }
+  
+  .hello-icon {
+    font-size: 3.2rem;
+    pointer-events: none;
+    cursor: move;
+  }
+  
+  .notes-p {
+    pointer-events: none;
+    cursor: move;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    line-height: 1rem;
+  }
+  
+  /* Add your media queries here */
+  
