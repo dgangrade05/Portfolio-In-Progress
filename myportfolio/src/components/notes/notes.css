@@ -11,7 +11,7 @@
     display: flex;
     opacity: 1;
     transform: translateX(0);
-    transition: opacity 1s, transform 0.5s;
+    transition: opacity 1, transform 0.5s;
     box-shadow: 0px 20px 10px -10px rgba(0, 0, 0, 0.28);
   }
   
@@ -40,5 +40,14 @@
     line-height: 1rem;
   }
   
+  #note1{
+    rotate: 11deg;
+    cursor: move;
+  }
+
+  #note2{
+    rotate:-6deg ;
+    cursor: move;
+  }
   /* Add your media queries here */
   
