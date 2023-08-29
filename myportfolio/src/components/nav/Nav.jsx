@@ -9,7 +9,7 @@ import {HiOutlineMail} from 'react-icons/hi'
 const Nav = () => {
   return (
     <nav>
-      <a href='#home'id='element' name='home'><GoHome /></a>
+      <a href='#'id='element' name='home'><GoHome /></a>
       <a href='#about' id='element' name='about'><SiAboutdotme /></a>
       <a href='#experience' id='element' name='experience'><RxRocket /></a>
       <a href='#projects' id='element' name='projects'><HiOutlineSparkles /></a>
