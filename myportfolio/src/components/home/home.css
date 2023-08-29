@@ -13,7 +13,7 @@ header {
 /* MEDIA QUERIES - for meduim devices */
 
 @media screen and (max-width: 1024px) {
-    .header {
+    header {
         height: 88vh;
       }
   }
@@ -21,5 +21,7 @@ header {
   /* MEDIA QUERIES - for small devices */
   
   @media screen and (max-width: 600px) {
- 
+    header{
+      height: 100vh;
+    }
   }
