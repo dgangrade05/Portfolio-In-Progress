@@ -49,5 +49,14 @@
     rotate:-6deg ;
     cursor: move;
   }
-  /* Add your media queries here */
+  
+  /* MEDIA QUERIES */
+@media screen and (max-width: 1024px){
+  #note1{
+    opacity: 0;
+  }
+  #note2{
+    opacity: 0;
+  }
+}
   
