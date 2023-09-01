@@ -1,16 +1,39 @@
-.about-container {
+.about-container{
+  margin-top: 8rem;
   display: flex;
   justify-content: center;
-  gap: 5rem;
-  height: 80vh;
+  align-items: center;
+  flex-direction: row;
 }
 
-.about-image img {
+.about-heading{
+  height: 8rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.about-image{
+  margin: 0px 150px;
+}
+
+.about-image img{
+  height: 150px;
+  width: 150px;
+  border-radius: 9999px;
+}
+
+.about-content{
   display: flex;
   justify-content: center;
-  height: 200px;
-  width: 200px;
-  border-radius: 9999px;
-  margin-top: 50px;
-  left: 20%;
+  align-items: center;
+}
+
+.about-content p{
+  text-align: justify;
+  width: 70%;
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
