@@ -1,14 +1,18 @@
 import React from "react";
 import "./about.css";
 import ME from "../../assets/pfp.jpg";
+import ARROW from "../../assets/arrow.svg"
 
 const About = () => {
   return (
     <section id="about">
-      <h1 className="about-heading">--- About ---</h1>
+      <h1 className="about-heading">About</h1>
       <div className="about-container">
         <div className="about-image">
           <img src={ME} alt="Profile"></img>
+        </div>
+        <div className="about-arrow">
+          <img src={ARROW} alt="Arrow"></img>
         </div>
         <div className="about-content">
           <p>

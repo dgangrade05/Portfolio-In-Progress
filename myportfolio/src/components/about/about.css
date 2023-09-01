@@ -20,9 +20,10 @@
 }
 
 .about-image img{
-  height: 150px;
-  width: 150px;
+  height: 200px;
+  width: 200px;
   border-radius: 9999px;
+  object-fit: cover;
 }
 
 .about-content{
@@ -33,7 +34,15 @@
 
 .about-content p{
   text-align: justify;
-  width: 70%;
-  font-size: 1.2rem;
+  width: 69%;
+  font-size: 1.25rem;
   line-height: 2rem;
+}
+
+.about-arrow img{
+  transform: translateY(-25px);
+  transform: translateX(2px);
+  rotate: 410deg;
+  width: 100px;
+  padding: 10px 10px;
 }
