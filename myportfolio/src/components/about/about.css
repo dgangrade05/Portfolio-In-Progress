@@ -6,9 +6,19 @@
     format("woff2");
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap');
+@font-face {
+  font-family: "San Francisco Display Black";
+  src: url("https://db.onlinewebfonts.com/t/27bd5eb24d76167e2e0b2e78969648d7.eot");
+  src: url("https://db.onlinewebfonts.com/t/27bd5eb24d76167e2e0b2e78969648d7.eot?#iefix")format("embedded-opentype"),
+  url("https://db.onlinewebfonts.com/t/27bd5eb24d76167e2e0b2e78969648d7.woff2")format("woff2"),
+  url("https://db.onlinewebfonts.com/t/27bd5eb24d76167e2e0b2e78969648d7.woff")format("woff"),
+  url("https://db.onlinewebfonts.com/t/27bd5eb24d76167e2e0b2e78969648d7.ttf")format("truetype"),
+  url("https://db.onlinewebfonts.com/t/27bd5eb24d76167e2e0b2e78969648d7.svg#San Francisco Display Black")format("svg");
+}
 
-.about-container{
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@500&display=swap");
+
+.about-container {
   margin-top: 8rem;
   display: flex;
   justify-content: center;
@@ -16,7 +26,7 @@
   flex-direction: row;
 }
 
-.about-heading{
+.about-heading {
   font-family: "Nintendoid1";
   letter-spacing: 3px;
   color: black;
@@ -34,35 +44,153 @@
   font-size: 2.2rem;
 }
 
-.about-image{
+.about-image {
   margin: 0px 150px;
 }
 
-.about-image img{
+.about-image img {
   height: 250px;
   width: 250px;
   border-radius: 9px;
   object-fit: cover;
 }
 
-.about-content{
+.about-content {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.about-content p{
-  font-family: 'Raleway', sans-serif;
+.about-content p {
+  font-family: "Raleway", sans-serif;
   text-align: justify;
   width: 75%;
   font-size: 1rem;
   line-height: 2rem;
 }
 
-.about-arrow img{
+.about-arrow img {
   transform: translateY(-25px);
   transform: translateX(2px);
   rotate: 410deg;
   width: 100px;
   padding: 10px 10px;
+}
+
+.education-heading {
+  font-family: "Nintendoid1";
+  letter-spacing: 3px;
+  color: black;
+  text-shadow: 0.1rem 0 0.06rem red, -0.125rem 0 0.06rem #ff0084;
+  animation-duration: 0.1s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  margin-top: 8rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+.timeline{
+  margin: 6em auto;
+  max-width: 36.1em;
+}
+
+.checkpoint {
+  max-width: 45em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  position: relative;
+}
+
+.checkpoint div {
+  border: 0.5px solid rgba(0, 0, 0, 0.362);
+  border-radius: 0.1em;
+  padding: 1.9em;
+}
+
+.checkpoint:nth-child(odd){
+  border-left: 2px solid black;
+  padding-left: 3em;
+  transform: translateX(18em);
+}
+
+.checkpoint:nth-child(even){
+  border-right: 2px solid black;
+  padding-right: 3em;
+  transform: translateX(-18em);
+}
+
+.checkpoint:nth-child(even)::before,
+.checkpoint:nth-child(odd)::before{
+  content:"";
+  background: black;
+  width: 3em;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.checkpoint:nth-child(odd)::before{
+  left: 0;
+}
+
+.checkpoint:nth-child(even)::before{
+  right: 0;
+}
+
+.checkpoint:nth-child(even) div::before,
+.checkpoint:nth-child(odd) div::before{
+  content: "";
+  background: black;
+  /* box-shadow: 0 0 0.5em gray; */
+  width: 0.8em;
+  height: 0.8em;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.checkpoint:nth-child(even) div::before{
+  right: -0.5em;
+}
+
+.checkpoint:nth-child(odd) div::before{
+  left: -0.5em;
+}
+
+.school-heading{
+  color: black;
+  font-family: "San Francisco Display Black";
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.school-heading span{
+  color: gray;
+}
+
+.degree{
+  font-size: 1.3rem;
+  margin-top: 1em;
+  font-weight: 900;
+  font-family: "Raleway", sans-serif;
+  color: rgba(0, 0, 0, 0.478);
+}
+
+.school-about{
+  color: black;
+  font-size: 1rem;  
+  font-family: "Raleway", sans-serif;
+  text-align: justify;
+  line-height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
