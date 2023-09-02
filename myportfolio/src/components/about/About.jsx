@@ -1,7 +1,7 @@
 import React from "react";
 import "./about.css";
 import ME from "../../assets/pfp.jpg";
-import ARROW from "../../assets/arrow.svg"
+import ARROW from "../../assets/arrow.svg";
 
 const About = () => {
   return (
@@ -16,14 +16,22 @@ const About = () => {
         </div>
         <div className="about-content">
           <p>
-            Greetings! I'm a 20-year-old Java wizard who's also a Spring Boot
-            aficionado. Some might call me laid-back, but I prefer the term
-            "efficiency enthusiast." You'll often find me diving headfirst into
-            Data Structures and Algorithms puzzles on LeetCode. Right now, I'm
-            on the hunt for internships to put my coding skills to the test and
-            continue this wild journey of self-improvement. If you're as stoked
-            about coding and problem-solving as I am, let's connect – we might
-            just create some tech magic together! 💻🚀
+            Listen closely, mortals. I am the 20-year-old Java necromancer,
+            wielding the dark arts of Spring Boot, web development, Python, and
+            the relentless hustle of the underworld. My coding skills are a
+            cursed force that chills the very souls of bugs and glitches.
+            Solving puzzles on LeetCode, especially those that descend into the
+            abyss of Data Structures and Algorithms, is my sinister pleasure.
+            💀🕸️ <br/>Amidst the shadows, I weave my dark melodies, for music is my
+            otherworldly companion. Presently, I haunt the realms of
+            internships, seeking to test and sharpen my coding skills while
+            conjuring eerie harmonies. Beware, for my journey of
+            self-improvement is relentless and foreboding. <br/>Should you dare to
+            walk this accursed path, sharing my thirst for coding and
+            problem-solving, consider this ominous invitation: Our collaboration
+            may unleash digital horrors that will forever haunt the tech world.
+            If you dare to proceed, we shall forge a pact that even the darkest
+            spirits of the digital realm would fear. 💻🚀🔮
           </p>
         </div>
       </div>

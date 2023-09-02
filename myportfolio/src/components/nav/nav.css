@@ -21,6 +21,7 @@ nav{
     border-radius: 1.4rem;
     padding: 0.8rem 0.9rem;
     box-shadow: rgba(0, 0, 0, 0.14) 0px 1px 10px;
+    cursor: pointer;
 }
 
 nav a{
