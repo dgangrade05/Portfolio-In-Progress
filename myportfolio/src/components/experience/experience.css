@@ -1,0 +1,99 @@
+.experience-heading {
+  font-family: "Nintendoid1";
+  letter-spacing: 3px;
+  color: black;
+  text-shadow: 0.1rem 0 0.06rem red, -0.125rem 0 0.06rem #ff0084;
+  animation-duration: 0.1s;
+  animation-name: textflicker;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  height: 8rem;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  font-size: 2.2rem;
+}
+
+#experience{
+    height: fit-content;
+}
+
+.experience-container {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-header {
+  display: flex;
+  gap: 2rem;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-subheading {
+  margin-top: 1rem;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+  font-size: 1.5rem;
+}
+
+.card-content {
+  margin-top: 15px;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  color: black;
+  font-family: "Raleway", sans-serif;
+  font-size: 0.9rem;
+}
+
+.card-content a{
+    color: rgb(21, 0, 74);
+    font-size: 20px;
+}
+
+.card-content a:hover{
+    color: red;
+}
+
+.card img {
+  height: 5rem;
+  width: 5rem;
+}
+
+.card-heading {
+  color: black;
+  font-family: "San Francisco Display Black";
+  font-size: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-heading span {
+  color: gray;
+}
+
+.card {
+  max-width: fit-content;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  max-width: 500px;
+  height: 450px;
+  padding: 35px;
+
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.45);
+  box-shadow: rgba(0, 0, 0, 0.173) 0px 5px 7px;
+  backdrop-filter: blur(15px);
+}
