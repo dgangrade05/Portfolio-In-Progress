@@ -10,6 +10,7 @@
   animation-iteration-count: infinite;
   animation-direction: alternate;
   height: 8rem;
+  text-align: center;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -19,8 +20,9 @@
 
 .projects-container {
   display: flex;
+  flex-direction: column;
+  align-items: center; /* Center the content horizontally */
   justify-content: center;
-  align-items: center;
 }
 
 .projects-content {
@@ -52,8 +54,21 @@
   width: 75px;
   height: 75px;
   pointer-events: none;
+  max-width: 100%; /* Scale the image to fit within its container */
+  height: auto;
 }
 
 #projects{
   height: fit-content;
+}
+
+@media (max-width: 768px) {
+  .coming-soon {
+    font-size: 30px; /* Further adjust font size for smaller screens */
+  }
+
+  .coming-soon img{
+    width: 35px;
+    height: 35px;
+  }
 }

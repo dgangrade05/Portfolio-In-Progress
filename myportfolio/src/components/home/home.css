@@ -57,17 +57,16 @@ header {
 }
 
 /* MEDIA QUERIES - for meduim devices */
-
-@media screen and (max-width: 1024px) {
-  header {
-    height: 88vh;
+@media (max-width: 768px) {
+  .name-heading {
+    font-size: 28px; /* Adjust font size for smaller screens */
   }
-}
 
-/* MEDIA QUERIES - for small devices */
+  .sub-heading {
+    font-size: 16px; /* Adjust font size for smaller screens */
+  }
 
-@media screen and (max-width: 600px) {
-  header {
-    height: 100vh;
+  .container.home-container {
+    padding: 10px; /* Adjust padding for smaller screens */
   }
 }

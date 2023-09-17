@@ -52,6 +52,8 @@
   color: black;
   font-family: "Raleway", sans-serif;
   font-size: 0.9rem;
+  font-size: 14px; /* Adjust the font size for card content */
+  line-height: 1.5;
 }
 
 .card-content a{
@@ -66,12 +68,14 @@
 .card img {
   height: 5rem;
   width: 5rem;
+  max-width: 100%;
 }
 
 .card-heading {
   color: black;
   font-family: "San Francisco Display Black";
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
+  font-size: 20px;
   justify-content: center;
   align-items: center;
 }
@@ -86,7 +90,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
+  margin-bottom: 20px;
   max-width: 500px;
   height: 450px;
   padding: 35px;
@@ -96,4 +100,18 @@
   background-color: rgba(255, 255, 255, 0.45);
   box-shadow: rgba(0, 0, 0, 0.173) 0px 5px 7px;
   backdrop-filter: blur(15px);
+}
+
+@media (max-width: 768px) {
+  .experience-container{
+  flex-direction: column;
+  }
+
+  .card-heading {
+    font-size: 18px; /* Further adjust font size for smaller screens */
+  }
+
+  .card-content {
+    font-size: 12px; /* Further adjust font size for smaller screens */
+  }
 }

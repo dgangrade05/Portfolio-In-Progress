@@ -27,7 +27,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .about-heading {
@@ -46,6 +46,7 @@
   /* grid-template-columns: repeat(3,0.1fr); */
   text-align: center;
   font-size: 2.2rem;
+  margin-top: 10px;
 }
 
 .about-image {
@@ -57,19 +58,23 @@
   width: 250px;
   border-radius: 9px;
   object-fit: cover;
+  max-width: 100%; /* Scale the image to fit its container */
+  /* height: auto; */
 }
 
 .about-content {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 20px;
 }
 
 .about-content p {
   font-family: "Raleway", sans-serif;
   text-align: justify;
-  width: 72%;
-  font-size: 1.1rem;
+  width: 75%;
+  /* font-size: 1.1rem; */
+  font-size: 16px; /* Adjust font size for smaller screens */
   line-height: 2rem;
 }
 
@@ -197,4 +202,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .about-content p {
+    font-size: 14px; /* Further adjust font size for smaller screens */
+  }
+  .education-heading,
+  .timeline {
+    display: none;
+  }
+  .about-image img {
+    height: auto;
+  }
 }

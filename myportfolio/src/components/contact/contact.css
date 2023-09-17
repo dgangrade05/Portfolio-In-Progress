@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap");
 
-#contact{
-    height: fit-content;
+#contact {
+  height: fit-content;
 }
 
 .contact-heading {
@@ -41,7 +41,7 @@
 }
 
 .contact-container {
-  height: 90vh;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   display: grid;
@@ -127,4 +127,25 @@
 .form-button img {
   height: 25px;
   width: 25px;
+}
+
+@media (max-width: 768px) {
+  .subheading-text {
+    font-size: 24px;
+  }
+  .social-items {
+    font-size: 16px;
+  }
+  .main-subheading img {
+    width: 50px;
+    height: 50px;
+  }
+  .form-input-div input,
+  .form-input-div textarea {
+    width: 100%;
+    max-width: 100%;
+  }
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
 }
