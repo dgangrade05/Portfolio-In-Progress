@@ -16,6 +16,10 @@ header {
     format("woff2");
 }
 
+#home{
+  height: fit-content;
+}
+
 .name-heading {
   font-family: "Nintendoid1";
   color: black;
